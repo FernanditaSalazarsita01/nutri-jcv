@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Nutri FGSS</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <div>
+    <h2>Nutri FGSS</h2>
+    <p id="nutriologoActivo"></p>
+  </div>
+  <button id="btnCerrarSesion">Cerrar sesión</button>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h3>Preregistro antropométrico</h3>
+
+    <input type="text" id="nombrePaciente" placeholder="Nombre del paciente">
+    <input type="number" id="edad" placeholder="Edad">
+    <input type="number" id="peso" placeholder="Peso en kg">
+    <input type="number" step="0.01" id="altura" placeholder="Altura en metros. Ejemplo: 1.70">
+
+    <button id="btnGuardarPaciente">Guardar paciente</button>
+  </section>
+
+  <section class="card">
+    <h3>Consulta del día</h3>
+
+    <select id="listaPacientes">
+      <option value="">Selecciona un paciente</option>
+    </select>
+
+    <input type="date" id="fecha">
+    <input type="time" id="hora">
+
+    <textarea id="evolucion" placeholder="Evolución del paciente"></textarea>
+    <textarea id="plan" placeholder="Plan de alimentación"></textarea>
+
+    <button id="btnGuardarConsulta">Guardar consulta</button>
+  </section>
+
+  <section class="card historial">
+    <div class="historial-header">
+  <h3>Historial clínico</h3>
+  <button id="btnLimpiarHistorial" class="btn-eliminar">
+    Limpiar historial
+  </button>
+</div>
+    <div id="datosPaciente"></div>
+    <div id="historialConsultas"></div>
+  </section>
+
+</main>
+
+<script type="module" src="js/panel.js"></script>
+</body>
+</html>
